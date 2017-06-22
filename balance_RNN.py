@@ -68,7 +68,7 @@ test_X = np.reshape(test_X, (test_X.shape[0], 1,test_X.shape[2]))
 
 # create and fit the LSTM network
 model = Sequential()
-model.add(LSTM(4, input_shape=(look_back,len(features)),activation='relu'))
+model.add(LSTM(10, input_shape=(look_back,len(features)),activation='relu'))
 model.add(Dense(n_nodes_hl1,activation='relu'))
 model.add(Dense(n_classes,activation='sigmoid'))
 model.compile(loss='categorical_crossentropy', optimizer='adam',metrics=['accuracy'])
